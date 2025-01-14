@@ -1,6 +1,7 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  background-color: #ebebeb;
 }
 
 .columns img {
@@ -9,6 +10,14 @@
 
 .columns > div > div {
   order: 1;
+}
+
+.columns div:first-child {
+  flex-grow: 2;
+}
+ 
+.columns div:first-child + div {
+  padding: 30px;
 }
 
 .columns > div > .columns-img-col {
@@ -23,7 +32,11 @@
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
+    gap: 10px;
+  }
+
+  .columns img {
+    height: 550px;
   }
 
   .columns > div > div {

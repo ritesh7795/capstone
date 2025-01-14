@@ -8,13 +8,13 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  /* border: 1px solid #dadada; */
   background-color: var(--background-color);
 }
 
-.cards .cards-card-body {
+/* .cards .cards-card-body {
   margin: 16px;
-}
+} */
 
 .cards .cards-card-image {
   line-height: 0;
@@ -25,3 +25,13 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+.useravatar ul li {
+  text-align: center;
+}
+ 
+.useravatar ul li .cards-card-image img {
+  width: 164px;
+  height: 164px;
+  border-radius: 100%;
+}
+ 

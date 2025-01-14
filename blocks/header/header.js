@@ -126,6 +126,9 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
+  // navBrand.innerHTML = `<a class="logo" data-cmp-clickable="" href="/us/en.html">
+  //       <img src="/content/experience-fragments/wknd/language-masters/en/site/header/master/_jcr_content/root/container/container_1195249223/image.coreimg.svg/1594412560447/wknd-logo-dk.svg" loading="lazy" class="logo_image" itemprop="contentUrl" alt="WKND Logo">
+  //   </a>`;
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
@@ -133,14 +136,28 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
+  const navTools = nav.querySelector('.nav-tools');
+
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
+      navSection.addEventListener("click", () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }
+      });
+    });
+  }
+  if (navTools) {
+    navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTools) => {  
+      if (navTools.querySelector('ul')) navTools.classList.add('nav-drop');
+      navTools.addEventListener('click', () => {
+        if (isDesktop.matches) {
+          const expanded = navTools.getAttribute('aria-expanded') === 'true';
+          toggleAllNavSections(navTools);
+          navTools.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
     });
