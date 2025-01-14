@@ -277,7 +277,7 @@ header nav .nav-sections ul>li>ul>li {
     font-size: 16px;
     color: #111827;
     font-family: sans-serif;
-    max-width: 98px;
+    max-width: 120px;
     white-space: normal;
     /* Allow text to wrap to the next line */
     overflow: hidden;
@@ -300,16 +300,10 @@ header nav .nav-sections ul>li>ul>li {
     position: relative; */
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
-    display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
-    white-space: initial;
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='false']>ul {
+    display: none;
   }
+
 
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
@@ -371,17 +365,14 @@ header nav .nav-sections ul>li>ul>li {
     font-size: 16px;
     color: #111827;
     font-family: sans-serif;
-    max-width: 98px;
+    max-width: 120px;
     white-space: normal;
     /* Allow text to wrap to the next line */
     overflow: hidden;
     /* Ensure no overflow beyond the max-width */
     /* Set a max-width to allow text wrapping */
   }
-  header nav .nav-tools .default-content-wrapper>ul>li>ul {
-    display: none;
-    position: relative;
-  }
+ 
 
   header nav .nav-tools .default-content-wrapper>ul>li[aria-expanded='true']>ul {
     display: block;
