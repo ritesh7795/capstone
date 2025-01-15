@@ -1,31 +1,58 @@
-footer {
-  /* background-color: var(--light-color); */
-  background-color: rgb(32, 32, 32);
-  font-size: var(--body-font-size-xs);
-  color: #fff;
-}
- 
-footer .section:not(:last-child) {
-  margin-bottom: 15px;
-}
-.parent-section {
-  display:flex;
-  flex-wrap: wrap;
-}
- 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
- 
-footer .footer p {
-  margin: 0;
-}
- 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+ .parent-section {
+   display: flex;
+   flex-wrap: wrap;
+   border-top: 1px solid lightsteelblue;
+   border-bottom: 1px solid lightsteelblue;
+
+ }
+
+ footer .footer>div {
+   margin: auto;
+   max-width: 1200px;
+   padding: 40px 24px 20px;
+ }
+
+ .section {
+  flex: 1 1 calc(15% - 15px);
+   color: #4b5563;
+   font-size: 14px;  
+   
+ }
+  .footer-section-accounts{
+    padding-bottom: 40px;
   }
-}
- 
+
+ .footer-follow-us {
+  flex: 1 1 calc(22.5% - 15px);
+
+ }
+
+ .footer-subscribe {
+  flex: 1 1 calc(22.5% - 15px);
+
+ }
+
+ .footer-follow-us .icon {
+   padding-right: 10px;
+   color: #4b5563;
+   
+ }
+ .footer-section-others{
+  border-top: 1px solid #4B5563;
+  padding-top: 20px;
+  flex: 1 1 calc(40% - 15px);
+
+ }
+ .footer-section-privacy{
+  border-top: 1px solid #4B5563;
+  padding-top: 20px;
+  flex: 1 1 calc(20% - 15px);
+
+ }
+
+
+ @media (width >=900px) {
+   footer .footer>div {
+     padding: 40px 40px 20px;
+   }
+ }
