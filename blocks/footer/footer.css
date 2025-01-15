@@ -8,6 +8,10 @@ footer {
 footer .section:not(:last-child) {
   margin-bottom: 15px;
 }
+.parent-section {
+  display:flex;
+  flex-wrap: wrap;
+}
  
 footer .footer > div {
   margin: auto;

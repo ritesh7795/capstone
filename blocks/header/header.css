@@ -16,7 +16,7 @@ header nav {
   grid-template:
     'hamburger brand tools' var(--nav-height) 'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
-  gap: 0 24px;
+  gap: 0 14px;
   margin: auto;
   max-width: 1248px;
   height: var(--nav-height);
@@ -223,12 +223,13 @@ header nav .nav-sections ul {
   font-size: var(--body-font-size-s);
 }
 
-header nav .nav-sections ul>li {
-  font-weight: 200;
-  font-size: 16px;
-  padding: 10px 0;
+header nav .nav-sections ul>li>span {
   border-bottom: 1px solid #E8E8E8;
-  color: #111827;
+
+  margin-top: 0;
+}
+.section{
+  flex: 1;
 }
 
 header nav .nav-sections ul>li>ul {
@@ -280,7 +281,6 @@ header nav .nav-sections ul>li>ul>li {
     max-width: 120px;
     white-space: normal;
     /* Allow text to wrap to the next line */
-    overflow: hidden;
     /* Ensure no overflow beyond the max-width */
     /* Set a max-width to allow text wrapping */
   }
@@ -368,7 +368,6 @@ header nav .nav-sections ul>li>ul>li {
     max-width: 120px;
     white-space: normal;
     /* Allow text to wrap to the next line */
-    overflow: hidden;
     /* Ensure no overflow beyond the max-width */
     /* Set a max-width to allow text wrapping */
   }
