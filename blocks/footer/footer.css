@@ -12,60 +12,58 @@
    padding: 40px 24px 20px;
  }
 
- .section {
+ .footer .parent-section .section {
    flex: 1 1 calc(50% - 15px);
    color: #4b5563;
    font-size: 14px;
- }
-
- .footer-subscribe {
-   flex: 1 1 calc(100% - 15px);
- }
-
- .footer-section-accounts {
    padding-bottom: 10px;
  }
 
- .footer-section-others,
- .footer-section-privacy {
+ .footer .parent-section .footer-subscribe {
+   flex: 1 1 calc(100% - 15px);
+ }
+
+ .footer .parent-section .footer-section-accounts {
+   padding-bottom: 10px;
+ }
+
+ .footer .parent-section .footer-section-others,
+ .footer .parent-section .footer-section-privacy {
    padding-top: 20px;
    text-align: center;
    flex: 1 1 calc(100% - 15px);
 
  }
 
- .footer-follow-us .icon {
+ .footer .parent-section .footer-follow-us .icon {
    padding-right: 10px;
    color: #4b5563;
  }
 
  @media (width >=900px) {
-   .section {
+   .footer .parent-section .section {
      flex: 1 1 calc(15% - 15px);
      color: #4b5563;
      font-size: 14px;
-
-   }
-
-   .footer-section-accounts {
      padding-bottom: 40px;
+
    }
 
-   .footer-follow-us,
-   .footer-subscribe {
+   .footer .parent-section .footer-follow-us,
+   .footer .parent-section .footer-subscribe {
      flex: 1 1 calc(22.5% - 15px);
    }
 
-   .footer-section-others {
+   .footer .parent-section .footer-section-others {
+     border-top: 1px solid #4B5563;
+     padding-top: 20px;
+     flex: 1 1 calc(30% - 15px);
+   }
+
+   .footer .parent-section .footer-section-privacy {
      border-top: 1px solid #4B5563;
      padding-top: 20px;
      flex: 1 1 calc(40% - 15px);
-   }
-
-   .footer-section-privacy {
-     border-top: 1px solid #4B5563;
-     padding-top: 20px;
-     flex: 1 1 calc(20% - 15px);
    }
 
    footer .footer>div {

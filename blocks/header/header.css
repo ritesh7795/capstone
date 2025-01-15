@@ -225,7 +225,7 @@ header nav .nav-sections ul {
 
 header nav .nav-sections ul>li>span {
   border-bottom: 1px solid #E8E8E8;
-
+text-decoration: underline;
   margin-top: 0;
 }
 .section{
@@ -237,6 +237,8 @@ header nav .nav-sections ul>li>ul {
 }
 
 header nav .nav-sections ul>li>ul>li {
+  font-size: 14px;
+  text-decoration: underline;
   font-weight: 400;
 }
 
