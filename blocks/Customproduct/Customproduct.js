@@ -22,6 +22,8 @@ export default async function decorate(block) {
    const selectedPlaceHolderArray=await retrievePlaceHolders();
    document.getElementById("producttitle").textContent=selectedPlaceHolderArray[0];
    document.getElementById("productdescription").textContent=selectedPlaceHolderArray[1];
+   document.getElementById("productdescription").classList.add("product-description");
+
 
   /* change to ul, li */
 
