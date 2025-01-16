@@ -1,46 +1,44 @@
 .columns > div {
   display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.columns > div > div:not(.columns-img-col) {
+  display: flex;
   flex-direction: column;
-  background-color: #ebebeb;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
-.columns img {
-  width: 100%;
+.vacationsection .columns > div > div:not(.columns-img-col) {
+  color: #fff;
+  background-color: rgb(27, 37, 44);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.columns > div > div {
-  order: 1;
+.vacationsection .columns > div > div.columns-img-col {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
-.columns div:first-child {
-  flex-grow: 2;
-}
- 
-.columns div:first-child + div {
-  padding: 30px;
+.vacationsection .columns > div > div:not(.columns-img-col) h3 a {
+  color: #fff;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
+.heelssection .columns > div > div.columns-img-col {
+  width: 30%;
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
-}
-
-@media (width >= 900px) {
+@media (width < 950px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 10px;
+    flex-wrap: wrap;
   }
 
-  .columns img {
-    height: 550px;
-  }
-
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .heelssection .columns > div > div.columns-img-col {
+    flex-grow: 1;
+    margin-top: 60px;
   }
 }
