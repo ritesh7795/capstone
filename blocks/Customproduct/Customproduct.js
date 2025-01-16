@@ -19,7 +19,6 @@ const retrievePlaceHolders=async ()=>{
       return selectedPlaceHolderArray
 }
 export default async function decorate(block) {
-    console.log("block",block)
    const selectedPlaceHolderArray=await retrievePlaceHolders();
    document.getElementById("producttitle").textContent=selectedPlaceHolderArray[0];
    document.getElementById("productdescription").textContent=selectedPlaceHolderArray[1];
