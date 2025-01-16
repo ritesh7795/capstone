@@ -9,7 +9,7 @@ const retrievePlaceHolders = async () => {
     });
     const selectedPlaceHolderValue = result.find(item => item?.key == paramValue) || ""
     const selectedPlaceHolderArray = selectedPlaceHolderValue?.value ? selectedPlaceHolderValue?.value.split(",") : []
-    return selectedPlaceHolderArray
+    return selectedPlaceHolderArray;
 }
 export default async function decorate(block) {
     const selectedPlaceHolderArray = await retrievePlaceHolders();
