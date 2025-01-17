@@ -15,34 +15,51 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overflow-x: auto;
-  gap: 10px; /* Add space between slides */
+  gap: 10px;
+  /* Add space between slides */
 }
 
 .carousel2 .carousel2-slides::-webkit-scrollbar {
   display: none;
 }
-
 .carousel2 .carousel2-slide {
-  flex: 0 0 calc(19.2%); /* 100% / 5 slides = 20% */
+  flex: 0 0 calc(49.2%);
+  /* 100% / 5 slides = 20% */
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; /* Ensure content is at the bottom */
+  justify-content: flex-end;
+  /* Ensure content is at the bottom */
   position: relative;
+}
+
+@media(width>900px) {
+  .carousel2 .carousel2-slide {
+    flex: 0 0 calc(19.2%);
+    /* 100% / 5 slides = 20% */
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* Ensure content is at the bottom */
+    position: relative;
+  }
 }
 
 .carousel2 .carousel2-slide-image picture {
   inset: 0;
 }
 
-.carousel2 .carousel2-slide .carousel2-slide-image picture > img {
+.carousel2 .carousel2-slide .carousel2-slide-image picture>img {
   height: 375px;
 }
 
 .carousel2 .carousel2-slide .carousel2-slide-content {
   color: #000;
-  background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for background */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Slight transparency for background */
   bottom: 0;
   width: 100%;
   text-align: left;
@@ -120,7 +137,16 @@
   left: calc(50% - 2px);
 }
 
-@media (width >= 600px) {
+.carousel2-slide-content a {
+  background: #3b63fb;
+  padding: 6px 16px;
+  color: white;
+  border: 2px solid 3b63fb;
+  border-radius: 24px;
+  text-decoration: none;
+}
+
+@media (width >=600px) {
   .carousel2 .carousel2-navigation-buttons {
     left: 24px;
     right: 24px;
