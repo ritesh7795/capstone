@@ -136,7 +136,6 @@ const createButton = (fd) => {
   return { field: button, fieldWrapper };
 };
 
-
 const createTextArea = (fd) => {
   const field = document.createElement('textarea');
   setCommonAttributes(field, fd);
@@ -233,7 +232,7 @@ const FIELD_CREATOR_FUNCTIONS = {
   fieldset: createFieldset,
   checkbox: createCheckbox,
   radio: createRadio,
-  input:createInput,
+  input: createInput,
   button: createButton,
 };
 

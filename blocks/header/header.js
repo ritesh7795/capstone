@@ -126,9 +126,6 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  // navBrand.innerHTML = `<a class="logo" data-cmp-clickable="" href="/us/en.html">
-  //       <img src="/content/experience-fragments/wknd/language-masters/en/site/header/master/_jcr_content/root/container/container_1195249223/image.coreimg.svg/1594412560447/wknd-logo-dk.svg" loading="lazy" class="logo_image" itemprop="contentUrl" alt="WKND Logo">
-  //   </a>`;
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
@@ -141,42 +138,39 @@ export default async function decorate(block) {
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener("mouseenter", (event) => {
+      navSection.addEventListener('mouseenter', (event) => {
         if (isDesktop.matches) {
           const isExpanded = navSection.getAttribute('aria-expanded') === 'true';
           navSection.setAttribute('aria-expanded', !isExpanded);
         }
-        const childList = event.target.querySelector("ul");
+        const childList = event.target.querySelector('ul');
         if (childList) {
-          childList.addEventListener("mouseenter", () => {
+          childList.addEventListener('mouseenter', () => {
             if (isDesktop.matches) {
               navSection.setAttribute('aria-expanded', true);
             }
-          })
-          childList.addEventListener("mouseleave", () => {
+          });
+          childList.addEventListener('mouseleave', () => {
             if (isDesktop.matches) {
               navSection.setAttribute('aria-expanded', false);
             }
-          })
+          });
         }
-        document.addEventListener("scroll",()=>{
+        document.addEventListener('scroll', () => {
           navSection.setAttribute('aria-expanded', false);
-
-        })
-
+        });
       });
-
     });
   }
 
   if (navTools) {
-    navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTools) => {
-      if (navTools.querySelector('ul')) navTools.classList.add('nav-drop');
-      navTools.addEventListener('click', () => {
+    navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTool) => {
+      if (navTool.querySelector('ul')) navTool.classList.add('nav-drop');
+      navTool.addEventListener('click', () => {
         if (isDesktop.matches) {
-          const expanded = navTools.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navTools);
-          navTools.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          const expanded = navTool.getAttribute('aria-expanded') === 'true';
+          toggleAllNavSections(navTool);
+          navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
     });
