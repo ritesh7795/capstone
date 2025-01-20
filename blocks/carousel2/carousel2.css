@@ -64,6 +64,19 @@
   width: 100%;
   text-align: left;
   font-size: 18px;
+  padding:0px;
+  margin:0px;
+}
+.carousel2 .carousel2-slide .carousel2-slide-content p{
+  padding: 0px;
+  padding-bottom:10px;
+  margin:0px;
+}
+.carousel2 .carousel2-slide .carousel2-slide-content  h4{
+margin:0px;
+  padding:0px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .carousel2 .carousel2-slide-indicators {
@@ -139,10 +152,13 @@
 
 .carousel2-slide-content a {
   background: #3b63fb;
-  padding: 6px 16px;
+  padding: 6px 24px;
   color: white;
   border: 2px solid 3b63fb;
   border-radius: 24px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
   text-decoration: none;
 }
 

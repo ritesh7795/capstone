@@ -74,12 +74,8 @@ function bindEvents(block) {
 
 export default async function decorate(block) {
   const response = await fetch("http://localhost:3000/query-index.json");
-  
   const json = await response.json();
-  console.log("json",json)
   const carouselData = json.data.filter(item=>item.path.includes("/index"));
-  console.log("carousel-data",carouselData)
-  //const carouselData = [product, product, product, product, product, product, product, product, product];
   const isSingleSlide = carouselData.length < 2;
   function generateCarousel(carouselData) {
     // Create the outer carousel container
@@ -169,7 +165,7 @@ export default async function decorate(block) {
     const contentDiv = document.createElement('div');
     contentDiv.classList.add('carousel2-slide-content');
 
-    const heading = document.createElement('h2');
+    const heading = document.createElement('h4');
     heading.setAttribute('id', `carousel2-1-slide-title-${index}`);
     heading.textContent = data.title;
     contentDiv.appendChild(heading);
@@ -180,8 +176,8 @@ export default async function decorate(block) {
 
     const link = document.createElement('a');
     link.setAttribute('href', data.url);
-    link.setAttribute('title', 'Shop Now');
-    link.textContent = 'Shop Now';
+    link.setAttribute('title',  'ADD TO CART');
+    link.textContent = 'ADD TO CART';
     contentDiv.appendChild(link);
 
     slide.appendChild(contentDiv);
