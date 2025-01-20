@@ -1,3 +1,23 @@
-.product-description{
-    font-size: 15px;
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product .section1 {
+    font-size: 25px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product .section2 {
+    margin: 10px auto;
+    width: 350px;
+}
+.product .section3{
+    font-size: 18px;
 }

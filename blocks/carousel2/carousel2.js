@@ -138,7 +138,7 @@ export default async function decorate(block) {
     slide.setAttribute('id', `carousel2-1-slide-${index}`);
 
     // Create the slide image
-    const imageDiv = document.createElement('div');
+    const imageDiv = document.createElement('a');
     imageDiv.classList.add('carousel2-slide-image');
     const picture = document.createElement('picture');
 
@@ -161,6 +161,7 @@ export default async function decorate(block) {
     picture.appendChild(img);
 
     imageDiv.appendChild(picture);
+    imageDiv.setAttribute("href",data.url);
     slide.appendChild(imageDiv);
 
     // Create slide content (text and linlink)
