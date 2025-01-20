@@ -22,6 +22,7 @@
 .carousel2 .carousel2-slides::-webkit-scrollbar {
   display: none;
 }
+
 .carousel2 .carousel2-slide {
   flex: 0 0 calc(49.2%);
   /* 100% / 5 slides = 20% */
@@ -64,17 +65,19 @@
   width: 100%;
   text-align: left;
   font-size: 18px;
-  padding:0px;
-  margin:0px;
-}
-.carousel2 .carousel2-slide .carousel2-slide-content p{
   padding: 0px;
-  padding-bottom:10px;
-  margin:0px;
+  margin: 0px;
 }
-.carousel2 .carousel2-slide .carousel2-slide-content  h4{
-margin:0px;
-  padding:0px;
+
+.carousel2 .carousel2-slide .carousel2-slide-content p {
+  padding: 0px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.carousel2 .carousel2-slide .carousel2-slide-content h4 {
+  margin: 0px;
+  padding: 0px;
   font-weight: 600;
   font-size: 20px;
 }
