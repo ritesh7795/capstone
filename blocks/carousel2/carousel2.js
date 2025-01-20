@@ -73,10 +73,13 @@ function bindEvents(block) {
 }
 
 export default async function decorate(block) {
-  const response = await fetch("https://admin.hlx.page/index/ritesh7795/capstone/main/index");
+  const response = await fetch("http://localhost:3000/query-index.json");
+  
   const json = await response.json();
-  const product = json.results[0].record;
-  const carouselData = [product, product, product, product, product, product, product, product, product];
+  console.log("json",json)
+  const carouselData = json.data.filter(item=>item.path.includes("/index"));
+  console.log("carousel-data",carouselData)
+  //const carouselData = [product, product, product, product, product, product, product, product, product];
   const isSingleSlide = carouselData.length < 2;
   function generateCarousel(carouselData) {
     // Create the outer carousel container
