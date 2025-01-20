@@ -31,7 +31,7 @@ function showSlide(block, slideIndex = 0) {
   let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
   if (slideIndex >= slides.length) realSlideIndex = 0;
   const activeSlide = slides[realSlideIndex];
-  
+
   activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
   block.querySelector('.carousel2-slides').scrollTo({
     top: 0,
@@ -52,12 +52,12 @@ function bindEvents(block) {
   });
 
   block.querySelector('.slide-prev').addEventListener('click', () => {
-    const targetSlide=block.querySelector("div").dataset.activeSlide;
-    console.log("targetSlide",targetSlide)
+    const targetSlide = block.querySelector("div").dataset.activeSlide;
+    console.log("targetSlide", targetSlide)
     showSlide(block, parseInt(targetSlide, 10) - 1);
   });
   block.querySelector('.slide-next').addEventListener('click', () => {
-    const targetSlide=block.querySelector("div").dataset.activeSlide;
+    const targetSlide = block.querySelector("div").dataset.activeSlide;
 
     showSlide(block, parseInt(targetSlide, 10) + 1);
   });
@@ -75,7 +75,7 @@ function bindEvents(block) {
 export default async function decorate(block) {
   const response = await fetch("http://localhost:3000/query-index.json");
   const json = await response.json();
-  const carouselData = json.data.filter(item=>item.path.includes("/index"));
+  const carouselData = json.data.filter(item => item.path.includes("/index"));
   const isSingleSlide = carouselData.length < 2;
   function generateCarousel(carouselData) {
     // Create the outer carousel container
@@ -111,8 +111,10 @@ export default async function decorate(block) {
     const slideIndicators = document.createElement('ol');
     slideIndicators.classList.add('carousel2-slide-indicators');
     carouselData.forEach((_, index) => {
-      const indicator = createSlideIndicator(index, carouselData.length);
-      slideIndicators.appendChild(indicator);
+      if (index % 5 == 0) {
+        const indicator = createSlideIndicator(index, carouselData.length);
+        slideIndicators.appendChild(indicator);
+      }
     });
 
     // Create the carousel navigation controls
@@ -176,7 +178,7 @@ export default async function decorate(block) {
 
     const link = document.createElement('a');
     link.setAttribute('href', data.url);
-    link.setAttribute('title',  'ADD TO CART');
+    link.setAttribute('title', 'ADD TO CART');
     link.textContent = 'ADD TO CART';
     contentDiv.appendChild(link);
 
